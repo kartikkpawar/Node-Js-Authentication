@@ -13,7 +13,7 @@ const flash = require("connect-flash");
 const expressLayouts = require("express-ejs-layouts");
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT;
 
 // ejs setup
 app.use(expressLayouts);

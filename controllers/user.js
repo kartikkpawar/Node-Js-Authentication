@@ -26,6 +26,7 @@ exports.homepage = (req, res) => {
   return res.render("sign-in");
 };
 
+// Signing up user
 exports.signUpUser = async (req, res) => {
   const { name, email, password } = req.body;
   console.log(name, email, password);
@@ -44,6 +45,7 @@ exports.createGoogleSession = (req, res) => {
   return res.redirect("/user-profile");
 };
 
+// change password
 exports.changePassword = async (req, res, next) => {
   const { currentPassword, newPassword } = req.body;
   const email = req.user.email;
@@ -60,6 +62,7 @@ exports.changePassword = async (req, res, next) => {
   return res.status(200).send({ msg: "Signout Success", type: "success" });
 };
 
+// signout
 exports.signOut = (req, res) => {
   req.logout(function (err) {
     if (err) {
@@ -68,6 +71,8 @@ exports.signOut = (req, res) => {
     return res.render("sign-in");
   });
 };
+
+// forgot password
 exports.forgotPassword = async (req, res) => {
   const { email, newPassword } = req.body;
   const user = await User.findOne({ email });
@@ -77,13 +82,4 @@ exports.forgotPassword = async (req, res) => {
   user.save();
 
   return res.status(200).send({ msg: "Signout Success", type: "success" });
-};
-
-exports.signOut = (req, res) => {
-  req.logout(function (err) {
-    if (err) {
-      return next(err);
-    }
-    return res.render("sign-in");
-  });
 };
