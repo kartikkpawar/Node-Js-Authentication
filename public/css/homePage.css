@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #0d0d0d;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  background-image: linear-gradient(
+      29deg,
+      rgba(2, 0, 36, 0.9444152661064426) 53%,
+      rgba(0, 212, 255, 0) 100%
+    ),
+    url("https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: none;
+  background-size: cover;
+}
+
+.signUpContainer {
+  margin-left: 40px;
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+}
+.message {
+  text-transform: uppercase;
+  color: #758283;
+}
+.title {
+  font-weight: 600;
+  font-size: 40px;
+}
+.title > span {
+  color: #00d4fa;
+}
+.memberText {
+  color: #758283;
+}
+.memberText > a {
+  color: #00d4fa;
+  text-decoration: none;
+}
+.signUpFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputContainer {
+  margin-top: 10px;
+}
+.input {
+  background-color: #242b2e;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.input:focus {
+  outline: none;
+  border: 2px solid #00d4fa;
+}
+.email,
+.password,
+.name {
+  width: 100%;
+}
+.nameInput {
+  width: 45%;
+}
+.emailInput,
+.passwordInput {
+  width: 96%;
+}
+.signUpButton {
+  margin-top: 30px;
+  height: 60px;
+  width: 120px;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  border: none;
+  background-color: #00d4fa;
+  color: white;
+  cursor: pointer;
+}
+
+.profileContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 200;
+}
+.userName::before {
+  content: "Name: ";
+  font-weight: 600;
+}
+.userEmail::before {
+  content: "Email: ";
+  font-weight: 600;
+}
+
+.changePasswordButton {
+  font-size: 18px;
+  width: 200px;
+}
+.forgotPasswordButton {
+  font-size: 18px;
+  width: 200px;
+  background-color: #242b2e;
+}

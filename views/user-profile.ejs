@@ -1,0 +1,18 @@
+<div class="signUpContainer">
+    <span class="title">User Profile <span>.</span></span>
+    <span class="memberText">Change Password <a href="/change-password">Click here</a> </span>
+    <div class="profileContainer">
+        <span class="userName">
+            <%=locals.user.name%>
+        </span>
+        <span class="userEmail">
+            <%=locals.user.email%>
+        </span>
+
+
+        <form action="/signout" method="get">
+            <button class="signUpButton">Sign Out</button>
+        </form>
+
+    </div>
+</div>

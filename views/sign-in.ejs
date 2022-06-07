@@ -1,0 +1,28 @@
+<script src="./js/signin.js" defer></script>
+
+<div class="signUpContainer">
+    <span class="message">Sign In</span>
+    <span class="title">Sign in account <span>.</span></span>
+    <span class="memberText">New Member? <a href="/sign-up">Sign Up</a> </span>
+    <div class="signUpFormContainer">
+
+        <div class="inputContainer email">
+            <input type="email" class="input emailInput" placeholder="Email" id="signInEmail">
+        </div>
+        <div class="inputContainer password">
+            <input type="password" class="input passwordInput" placeholder="Password" id="signInPassword">
+        </div>
+
+        <div class="buttonContainer">
+            <button class="signUpButton forgotPasswordButton" onclick="window.location.href='/forgot-password'">Forgot
+                Password</button>
+            <button class="signUpButton" id="signInButton">Sign
+                In</button>
+        </div>
+
+        <form action="/auth/google" method="get">
+            <button class="signUpButton forgotPasswordButton"><i class='bx bxl-google'></i> Google</button>
+        </form>
+
+    </div>
+</div>
